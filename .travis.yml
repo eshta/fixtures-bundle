@@ -1,0 +1,11 @@
+language: php
+
+before_script:
+  - composer install
+
+script:
+  - ./vendor/bin/phpunit -v
+
+cache:
+  directories:
+    - $HOME/.composer/cache
