@@ -4,6 +4,7 @@ namespace Eshta\FixturesBundle\Executor;
 use Doctrine\Common\DataFixtures\Executor\AbstractExecutor;
 use Doctrine\Common\Persistence\ObjectManager;
 use Eshta\FixturesBundle\Repository\FixtureRepositoryInterface;
+use Doctrine\Common\DataFixtures\Executor\ORMExecutor as DoctrineORMExecutor;
 
 /**
  * Class ORMExecutor
@@ -23,7 +24,7 @@ class ORMExecutor
     protected $objectManager;
 
     /**
-     * @var \Doctrine\Common\DataFixtures\Executor\ORMExecutor
+     * @var DoctrineORMExecutor
      */
     protected $ormExecutor;
 
@@ -36,7 +37,7 @@ class ORMExecutor
     {
         $this->fixtureRepository = $fixtureRepository;
         $this->objectManager = $objectManager;
-        $this->ormExecutor = new \Doctrine\Common\DataFixtures\Executor\ORMExecutor($objectManager);
+        $this->ormExecutor = new DoctrineORMExecutor($objectManager);
     }
 
     /**

@@ -74,7 +74,7 @@ class FixtureLoader
     }
 
     /**
-     * @param $fileName
+     * @param string $fileName
      * @param bool $force
      * @return array
      */
@@ -116,7 +116,7 @@ class FixtureLoader
     }
 
     /**
-     * @param $directory
+     * @param string $directory
      * @return array
      */
     protected function getIncludedFiles($directory)

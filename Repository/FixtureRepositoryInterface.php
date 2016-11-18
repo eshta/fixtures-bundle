@@ -21,4 +21,11 @@ interface FixtureRepositoryInterface
      * @return mixed
      */
     public function add(FixtureInterface $fixtureInterface);
+
+    /**
+     * Checks if the fixtures table exists
+     *
+     * @return boolean
+     */
+    public function initialized();
 }
